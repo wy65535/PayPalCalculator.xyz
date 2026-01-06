@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free PayPal Calculator Fee 2026 - Calculate PayPal goods and services fees, international fees, invoice fees instantly. Accurate PayPal fee calculator for sellers and buyers.">
+    <meta name="keywords" content="paypal calculator fee, paypal fee calculator 2026, paypal goods and services fee calculator, paypal international fee calculator, paypal invoice fee calculator, calculate paypal fees, paypal transaction fee calculator, ebay paypal fee calculator">
+    <meta name="author" content="PayPal Calculator Fee">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="PayPal Calculator Fee 2026 - Calculate PayPal Fees Instantly">
+    <meta property="og:description" content="Free PayPal fee calculator for 2026. Calculate goods and services, international, and invoice fees with accuracy.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paypalcalculatorfee.com">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PayPal Calculator Fee 2026">
+    <meta name="twitter:description" content="Calculate PayPal fees instantly - Goods and Services, International, Invoice fees">
+    
+    <title>PayPal Calculator Fee 2026 - Free PayPal Fee Calculator</title>
+    <link rel="canonical" href="https://paypalcalculatorfee.com">
+    <link rel="icon" href="favicon.ico">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom, #f7fafc, #ffffff);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #003087;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .calculator-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 700px;
+        }
+        
+        .calculator-header {
+            background: linear-gradient(to right, #003087, #0070BA);
+            color: white;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+            margin: -30px -30px 30px -30px;
+        }
+        
+        .calculator-title {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            background: #f1f5f9;
+            padding: 5px;
+            border-radius: 8px;
+        }
+        
+        .tab {
+            flex: 1;
+            padding: 12px;
+            background: transparent;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .tab.active {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 15px;
+            background: #e0f2fe;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #374151;
+        }
+        
+        select, input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        select:focus, input:focus {
+            outline: none;
+            border-color: #003087;
+        }
+        
+        input[type="number"] {
+            font-size: 1.2rem;
+        }
+        
+        .result-box {
+            background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+            border: 2px solid #003087;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 25px;
+        }
+        
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .result-row:last-child {
+            border-bottom: none;
+            padding-top: 15px;
+            margin-top: 10px;
+        }
+        
+        .result-label {
+            font-weight: 500;
+            color: #6b7280;
+        }
+        
+        .result-value {
+            font-weight: 700;
+        }
+        
+        .result-total {
+            font-size: 1.8rem;
+            color: #003087;
+        }
+        
+        .fee-red {
+            color: #dc2626;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            color: #003087;
+            margin-bottom: 10px;
+        }
+        
+        .content-section {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 30px 0;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: #003087;
+            margin: 30px 0 20px 0;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: #0070BA;
+            margin: 25px 0 15px 0;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+        }
+        
+        th {
+            background: #003087;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 50px;
+        }
+        
+        .footer-links {
+            margin: 15px 0;
+        }
+        
+        .footer-links a {
+            color: #003087;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .calculator-card {
+                padding: 20px;
+            }
+            
+            .calculator-header {
+                margin: -20px -20px 20px -20px;
+            }
+            
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .content-section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PayPal Calculator Fee 2026</h1>
+            <p class="subtitle">The most accurate <strong>PayPal fee calculator</strong> for 2026. Calculate <strong>PayPal goods and services fees</strong>, <strong>international transaction fees</strong>, and <strong>invoice fees</strong> instantly.</p>
+        </header>
+
+        <!-- Calculator -->
+        <div class="calculator-card">
+            <div class="calculator-header">
+                <div class="calculator-title">💰 PayPal Fee Calculator</div>
+                <div>Calculate PayPal Goods and Services Fees</div>
+            </div>
+
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab('receive')">Receive Payment (Seller)</button>
+                <button class="tab" onclick="switchTab('send')">Send Payment (Buyer)</button>
+            </div>
+
+            <div id="receive-tab" class="tab-content active">
+                <p><strong>Receive Mode:</strong> Enter the total amount you received, and we'll calculate PayPal fees and your net amount.</p>
+            </div>
+
+            <div id="send-tab" class="tab-content">
+                <p><strong>Send Mode:</strong> Enter the amount you want the recipient to receive, and we'll calculate the total you need to send (including fees).</p>
+            </div>
+
+            <div class="form-group">
+                <label for="feeType">Transaction Type</label>
+                <select id="feeType" onchange="calculate()">
+                    <option value="domestic">Domestic - United States (2.99% + $0.49)</option>
+                    <option value="international">International (4.49% + $0.49)</option>
+                    <option value="micropayment">Micropayment - Under $10 (6.5% + $0.05)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Amount (USD)</label>
+                <input type="number" id="amount" placeholder="0.00" step="0.01" min="0" oninput="calculate()">
+            </div>
+
+            <div id="result" style="display: none;" class="result-box">
+                <div class="result-row">
+                    <span class="result-label" id="originalLabel">Amount Received</span>
+                    <span class="result-value" id="originalAmount">$0.00</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">PayPal Fee</span>
+                    <span class="result-value fee-red" id="feeAmount">-$0.00</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label" id="resultLabel">Net Amount</span>
+                    <span class="result-value result-total" id="resultAmount">$0.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Instant Calculation</div>
+                <p>Calculate PayPal fees in real-time with our advanced <strong>PayPal transaction fee calculator</strong>.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <div class="feature-title">International Support</div>
+                <p>Our <strong>PayPal international fee calculator</strong> supports cross-border transactions with accurate rates.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <div class="feature-title">2026 Updated Rates</div>
+                <p>Always up-to-date with the latest PayPal fee structure for 2026, including goods and services fees.</p>
+            </div>
+        </div>
+
+        <!-- Content Section -->
+        <div class="content-section">
+            <h2>What is a PayPal Calculator Fee?</h2>
+            <p>A <strong>PayPal calculator fee</strong> is an essential tool for online sellers, freelancers, and businesses that need to understand the exact costs associated with receiving payments through PayPal. When you use PayPal for business transactions, PayPal charges a fee based on the transaction type and amount.</p>
+            <p>Our <strong>PayPal fee calculator 2026</strong> helps you determine exactly how much you'll receive after PayPal's fees are deducted, or how much you need to send to ensure the recipient gets a specific amount.</p>
+
+            <h2>Understanding PayPal Goods and Services Fee Calculator</h2>
+            <p>The <strong>PayPal goods and services fee calculator</strong> is specifically designed for commercial transactions. When you receive payments for goods or services, PayPal typically charges:</p>
+            <ul style="margin: 15px 0 15px 30px;">
+                <li><strong>Domestic transactions:</strong> 2.99% + $0.49 fixed fee</li>
+                <li><strong>International transactions:</strong> 4.49% + $0.49 fixed fee</li>
+                <li><strong>Micropayments:</strong> 6.5% + $0.05 fixed fee (for transactions under $10)</li>
+            </ul>
+            <p>Using our calculator, you can instantly see how much of your payment goes to PayPal fees and how much you actually receive.</p>
+
+            <h2>PayPal International Fee Calculator</h2>
+            <p>If you're receiving payments from customers in different countries, you need a reliable <strong>PayPal international fee calculator</strong>. International transactions typically have higher fees due to currency conversion and cross-border processing.</p>
+            <p>Our calculator automatically applies the correct international fee rate (4.49% + $0.49), helping you price your products or services appropriately for international customers. This is crucial for:</p>
+            <ul style="margin: 15px 0 15px 30px;">
+                <li>E-commerce stores selling globally</li>
+                <li>Freelancers working with international clients</li>
+                <li>Digital product sellers</li>
+                <li>Service providers with worldwide customers</li>
+            </ul>
+
+            <h2>PayPal Invoice Fee Calculator</h2>
+            <p>When you send invoices through PayPal, the platform charges the same fees as goods and services transactions. Our <strong>PayPal invoice fee calculator</strong> helps you determine:</p>
+            <ul style="margin: 15px 0 15px 30px;">
+                <li>The exact amount to invoice to receive your desired payment</li>
+                <li>How to structure your invoices to account for PayPal fees</li>
+                <li>Whether to absorb the fees or pass them to your customer</li>
+            </ul>
+
+            <h2>eBay and PayPal Fee Calculator</h2>
+            <p>Although eBay now has its own managed payments system, many sellers still need an <strong>eBay and PayPal fee calculator</strong> for historical transactions or alternative payment methods. Understanding both fee structures is essential for calculating total selling costs and determining profitable pricing strategies.</p>
+
+            <h2>PayPal Fee Calculator for Different Transaction Types</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Transaction Type</th>
+                        <th>Fee Structure</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Domestic Goods & Services</td>
+                        <td>2.99% + $0.49</td>
+                        <td>US-based transactions</td>
+                    </tr>
+                    <tr>
+                        <td>International Goods & Services</td>
+                        <td>4.49% + $0.49</td>
+                        <td>Cross-border payments</td>
+                    </tr>
+                    <tr>
+                        <td>Micropayments</td>
+                        <td>6.5% + $0.05</td>
+                        <td>Transactions under $10</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Frequently Asked Questions - PayPal Calculator Fee</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I calculate PayPal fees for goods and services?</div>
+                <p>To calculate PayPal goods and services fees, multiply your transaction amount by the percentage rate (2.99% for domestic or 4.49% for international), then add the fixed fee ($0.49). For example, on a $100 domestic transaction: ($100 × 0.0299) + $0.49 = $3.48 in fees.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What is the PayPal international fee calculator used for?</div>
+                <p>The <strong>PayPal international fee calculator</strong> is used to determine fees for cross-border transactions. International transactions have higher fees (4.49% + $0.49) compared to domestic ones, plus potential currency conversion fees.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I avoid PayPal fees?</div>
+                <p>PayPal fees for goods and services transactions cannot be completely avoided as they're part of PayPal's business model. However, you can minimize fees by using micropayment pricing for small transactions or negotiating who pays the fees.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How accurate is this PayPal fee calculator 2026?</div>
+                <p>Our <strong>PayPal fee calculator 2026</strong> is updated with the latest official PayPal fee structure. It provides accurate calculations for standard transactions. However, some specialized account types or promotional rates may differ slightly.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Should I charge customers the PayPal fee?</div>
+                <p>Whether to charge customers PayPal fees depends on your business model and competition. Some businesses absorb the fees (building them into product prices), while others add them as a separate line item. Use our calculator to determine the exact amount if you choose to pass fees to customers.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Are PayPal micropayment fees better for small transactions?</div>
+                <p>PayPal micropayment fees (6.5% + $0.05) are typically better for transactions under $10. For example, on a $5 transaction, standard fees would be $0.64, while micropayment fees would be $0.38. You need to contact PayPal to enable micropayment pricing on your account.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 PayPal Calculator Fee. Free PayPal fee calculator for accurate transaction cost estimation.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="sitemap.xml">Sitemap</a>
+            </div>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Not affiliated with PayPal. For official rates, visit PayPal.com</p>
+        </footer>
+    </div>
+
+    <script>
+        let currentMode = 'receive';
+        
+        const feeRates = {
+            domestic: { percentage: 2.99, fixed: 0.49 },
+            international: { percentage: 4.49, fixed: 0.49 },
+            micropayment: { percentage: 6.5, fixed: 0.05 }
+        };
+
+        function switchTab(mode) {
+            currentMode = mode;
+            
+            // Update tab buttons
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Update tab content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(mode + '-tab').classList.add('active');
+            
+            // Update labels
+            if (mode === 'receive') {
+                document.getElementById('originalLabel').textContent = 'Amount Received';
+                document.getElementById('resultLabel').textContent = 'Net Amount (You Keep)';
+            } else {
+                document.getElementById('originalLabel').textContent = 'Amount to Receive';
+                document.getElementById('resultLabel').textContent = 'Total to Send';
+            }
+            
+            calculate();
+        }
+
+        function calculate() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const feeType = document.getElementById('feeType').value;
+            const resultDiv = document.getElementById('result');
+            
+            if (isNaN(amount) || amount <= 0) {
+                resultDiv.style.display = 'none';
+                return;
+            }
+            
+            const rate = feeRates[feeType];
+            let fee, result;
+            
+            if (currentMode === 'receive') {
+                // Calculate fees for received amount
+                fee = amount * (rate.percentage / 100) + rate.fixed;
+                result = amount - fee;
+            } else {
+                // Calculate total needed to send
+                result = (amount + rate.fixed) / (1 - rate.percentage / 100);
+                fee = result - amount;
+            }
+            
+            document.getElementById('originalAmount').textContent = '$' + amount.toFixed(2);
+            document.getElementById('feeAmount').textContent = '-$' + fee.toFixed(2);
+            document.getElementById('resultAmount').textContent = '$' + result.toFixed(2);
+            
+            resultDiv.style.display = 'block';
+        }
+
+        // Google AdSense placeholder
+        window.addEventListener('load', function() {
+            // AdSense code will be inserted here after approval
+        });
+    </script>
+</body>
+</html>
+
