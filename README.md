@@ -1,4 +1,13 @@
-# PayPal Calculator Fee - 静态网站
+# PayPal Calculator Fee - Professional Edition
+
+## ✨ 增强功能
+
+- **4 种计算工具**：单笔、批量、利润、eBay+PayPal
+- **多国家支持**：美国、英国、欧盟、加拿大、澳大利亚
+- **多账户类型**：标准、非营利、慈善、小额支付
+- **货币转换费用**：真实国际交易计算
+- **批量处理**：一次计算数百笔交易
+- **利润优化**：自动计算定价策略
 
 ## 📦 部署到 GitHub + Cloudflare
 
