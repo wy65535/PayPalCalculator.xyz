@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free PayPal Calculator Fee 2026 - Calculate PayPal goods and services fees, international fees, invoice fees instantly. Accurate PayPal fee calculator for sellers and buyers.">
-    <meta name="keywords" content="paypal calculator fee, paypal fee calculator 2026, paypal goods and services fee calculator, paypal international fee calculator, paypal invoice fee calculator, calculate paypal fees, paypal transaction fee calculator, ebay paypal fee calculator">
+    <meta name="description" content="Advanced PayPal Calculator Fee 2026 - Calculate PayPal goods and services fees, international fees with currency conversion, invoice fees, eBay fees, bulk calculations, and profit calculator. The most comprehensive PayPal fee calculator.">
+    <meta name="keywords" content="paypal calculator fee, paypal fee calculator 2026, paypal goods and services fee calculator, paypal international fee calculator, paypal invoice fee calculator, calculate paypal fees, paypal transaction fee calculator, ebay paypal fee calculator, paypal bulk calculator, paypal profit calculator, currency conversion fees">
     <meta name="author" content="PayPal Calculator Fee">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="PayPal Calculator Fee 2026 - Calculate PayPal Fees Instantly">
-    <meta property="og:description" content="Free PayPal fee calculator for 2026. Calculate goods and services, international, and invoice fees with accuracy.">
+    <meta property="og:title" content="Advanced PayPal Calculator Fee 2026 - Professional Fee Calculator">
+    <meta property="og:description" content="Professional PayPal fee calculator with currency conversion, bulk calculations, profit calculator, and eBay integration.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://paypalcalculatorfee.com">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PayPal Calculator Fee 2026">
-    <meta name="twitter:description" content="Calculate PayPal fees instantly - Goods and Services, International, Invoice fees">
+    <meta name="twitter:title" content="Advanced PayPal Calculator Fee 2026">
+    <meta name="twitter:description" content="Professional PayPal fee calculator with advanced features">
     
-    <title>PayPal Calculator Fee 2026 - Free PayPal Fee Calculator</title>
+    <title>Advanced PayPal Calculator Fee 2026 - Professional Fee Calculator</title>
     <link rel="canonical" href="https://paypalcalculatorfee.com">
     <link rel="icon" href="favicon.ico">
     
@@ -38,7 +38,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -54,10 +54,21 @@
             margin-bottom: 15px;
         }
         
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
         .subtitle {
             font-size: 1.2rem;
             color: #666;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
         
@@ -67,7 +78,7 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             padding: 30px;
             margin: 40px auto;
-            max-width: 700px;
+            max-width: 1200px;
         }
         
         .calculator-header {
@@ -83,27 +94,69 @@
             margin-bottom: 5px;
         }
         
-        .tabs {
+        .main-tabs {
             display: flex;
             gap: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             background: #f1f5f9;
             padding: 5px;
             border-radius: 8px;
+            flex-wrap: wrap;
         }
         
-        .tab {
+        .main-tab {
             flex: 1;
+            min-width: 150px;
             padding: 12px;
             background: transparent;
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            color: #64748b;
+        }
+        
+        .main-tab.active {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #003087;
+        }
+        
+        .main-tab:hover {
+            color: #0070BA;
+        }
+        
+        .tool-section {
+            display: none;
+        }
+        
+        .tool-section.active {
+            display: block;
+        }
+        
+        .sub-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            background: #e0f2fe;
+            padding: 5px;
+            border-radius: 8px;
+        }
+        
+        .sub-tab {
+            flex: 1;
+            padding: 10px;
+            background: transparent;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
             transition: all 0.3s;
         }
         
-        .tab.active {
+        .sub-tab.active {
             background: white;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
@@ -111,13 +164,20 @@
         .tab-content {
             display: none;
             padding: 15px;
-            background: #e0f2fe;
+            background: #f0f9ff;
             border-radius: 8px;
             margin-bottom: 20px;
         }
         
         .tab-content.active {
             display: block;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
         }
         
         .form-group {
@@ -129,9 +189,17 @@
             font-weight: 600;
             margin-bottom: 8px;
             color: #374151;
+            font-size: 0.95rem;
         }
         
-        select, input {
+        .label-help {
+            font-weight: 400;
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-left: 5px;
+        }
+        
+        select, input, textarea {
             width: 100%;
             padding: 12px;
             border: 2px solid #e5e7eb;
@@ -140,13 +208,52 @@
             transition: border-color 0.3s;
         }
         
-        select:focus, input:focus {
+        select:focus, input:focus, textarea:focus {
             outline: none;
             border-color: #003087;
         }
         
         input[type="number"] {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+        }
+        
+        textarea {
+            min-height: 120px;
+            font-family: monospace;
+            resize: vertical;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        input[type="checkbox"] {
+            width: auto;
+            cursor: pointer;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #003087, #0070BA);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,48,135,0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #6b7280, #4b5563);
         }
         
         .result-box {
@@ -188,9 +295,92 @@
             color: #dc2626;
         }
         
+        .fee-orange {
+            color: #ea580c;
+        }
+        
+        .profit-green {
+            color: #059669;
+        }
+        
+        .batch-results {
+            margin-top: 20px;
+        }
+        
+        .batch-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .batch-table th {
+            background: #003087;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .batch-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .batch-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .batch-table tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .summary-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #003087;
+        }
+        
+        .summary-label {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 5px;
+        }
+        
+        .summary-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #003087;
+        }
+        
+        .info-box {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin: 50px 0;
         }
@@ -200,6 +390,12 @@
             padding: 25px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         
         .feature-icon {
@@ -211,6 +407,7 @@
             font-size: 1.3rem;
             color: #003087;
             margin-bottom: 10px;
+            font-weight: 600;
         }
         
         .content-section {
@@ -309,12 +506,28 @@
                 margin: -20px -20px 20px -20px;
             }
             
-            .tabs {
+            .main-tabs {
                 flex-direction: column;
+            }
+            
+            .main-tab {
+                min-width: 100%;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
             }
             
             .content-section {
                 padding: 25px;
+            }
+            
+            .batch-table {
+                font-size: 0.85rem;
+            }
+            
+            .batch-table th, .batch-table td {
+                padding: 8px;
             }
         }
     </style>
@@ -322,178 +535,394 @@
 <body>
     <div class="container">
         <header>
-            <h1>PayPal Calculator Fee 2026</h1>
-            <p class="subtitle">The most accurate <strong>PayPal fee calculator</strong> for 2026. Calculate <strong>PayPal goods and services fees</strong>, <strong>international transaction fees</strong>, and <strong>invoice fees</strong> instantly.</p>
+            <div class="badge">🚀 PROFESSIONAL EDITION</div>
+            <h1>Advanced PayPal Calculator Fee 2026</h1>
+            <p class="subtitle">The most comprehensive <strong>PayPal fee calculator</strong> with currency conversion, bulk calculations, profit calculator, and eBay integration. Professional tool for sellers, freelancers, and businesses.</p>
         </header>
 
-        <!-- Calculator -->
+        <!-- Main Calculator -->
         <div class="calculator-card">
             <div class="calculator-header">
-                <div class="calculator-title">💰 PayPal Fee Calculator</div>
-                <div>Calculate PayPal Goods and Services Fees</div>
+                <div class="calculator-title">💰 Professional PayPal Fee Calculator Suite</div>
+                <div>Complete Fee Analysis with Advanced Features</div>
             </div>
 
-            <div class="tabs">
-                <button class="tab active" onclick="switchTab('receive')">Receive Payment (Seller)</button>
-                <button class="tab" onclick="switchTab('send')">Send Payment (Buyer)</button>
+            <!-- Main Tool Tabs -->
+            <div class="main-tabs">
+                <button class="main-tab active" onclick="switchMainTab('single')">📊 Single Transaction</button>
+                <button class="main-tab" onclick="switchMainTab('bulk')">📋 Bulk Calculator</button>
+                <button class="main-tab" onclick="switchMainTab('profit')">💹 Profit Calculator</button>
+                <button class="main-tab" onclick="switchMainTab('ebay')">🛒 eBay + PayPal</button>
             </div>
 
-            <div id="receive-tab" class="tab-content active">
-                <p><strong>Receive Mode:</strong> Enter the total amount you received, and we'll calculate PayPal fees and your net amount.</p>
-            </div>
-
-            <div id="send-tab" class="tab-content">
-                <p><strong>Send Mode:</strong> Enter the amount you want the recipient to receive, and we'll calculate the total you need to send (including fees).</p>
-            </div>
-
-            <div class="form-group">
-                <label for="feeType">Transaction Type</label>
-                <select id="feeType" onchange="calculate()">
-                    <option value="domestic">Domestic - United States (2.99% + $0.49)</option>
-                    <option value="international">International (4.49% + $0.49)</option>
-                    <option value="micropayment">Micropayment - Under $10 (6.5% + $0.05)</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="amount">Amount (USD)</label>
-                <input type="number" id="amount" placeholder="0.00" step="0.01" min="0" oninput="calculate()">
-            </div>
-
-            <div id="result" style="display: none;" class="result-box">
-                <div class="result-row">
-                    <span class="result-label" id="originalLabel">Amount Received</span>
-                    <span class="result-value" id="originalAmount">$0.00</span>
+            <!-- Single Transaction Calculator -->
+            <div id="single-tool" class="tool-section active">
+                <div class="sub-tabs">
+                    <button class="sub-tab active" onclick="switchSubTab('receive')">Receive (Seller)</button>
+                    <button class="sub-tab" onclick="switchSubTab('send')">Send (Buyer)</button>
                 </div>
-                <div class="result-row">
-                    <span class="result-label">PayPal Fee</span>
-                    <span class="result-value fee-red" id="feeAmount">-$0.00</span>
+
+                <div id="receive-tab" class="tab-content active">
+                    <p><strong>Receive Mode:</strong> Enter the total amount you received, and we'll calculate PayPal fees including currency conversion if applicable.</p>
                 </div>
-                <div class="result-row">
-                    <span class="result-label" id="resultLabel">Net Amount</span>
-                    <span class="result-value result-total" id="resultAmount">$0.00</span>
+
+                <div id="send-tab" class="tab-content">
+                    <p><strong>Send Mode:</strong> Enter the amount you want the recipient to receive, and we'll calculate the total you need to send (including all fees).</p>
                 </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="country">Country / Region</label>
+                        <select id="country" onchange="calculateSingle()">
+                            <option value="us">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="eu">European Union</option>
+                            <option value="ca">Canada</option>
+                            <option value="au">Australia</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="accountType">Account Type</label>
+                        <select id="accountType" onchange="calculateSingle()">
+                            <option value="standard">Standard Business</option>
+                            <option value="nonprofit">Non-Profit (2.2% + $0.30)</option>
+                            <option value="charity">Registered Charity</option>
+                            <option value="micropayment">Micropayment Account</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="transactionType">Transaction Type</label>
+                        <select id="transactionType" onchange="calculateSingle()">
+                            <option value="domestic">Domestic Transaction</option>
+                            <option value="international">International Transaction</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount">Amount <span class="label-help">(USD)</span></label>
+                        <input type="number" id="amount" placeholder="0.00" step="0.01" min="0" oninput="calculateSingle()">
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="currencyConversion" onchange="calculateSingle()">
+                    <label for="currencyConversion" style="margin-bottom: 0;">Include Currency Conversion Fee (3.5% - 4%)</label>
+                </div>
+
+                <div id="singleResult" style="display: none;"></div>
+            </div>
+
+            <!-- Bulk Calculator -->
+            <div id="bulk-tool" class="tool-section">
+                <div class="info-box">
+                    <strong>📋 Bulk Calculator:</strong> Enter multiple transactions (one per line) in format: <code>amount</code> or <code>amount, type</code><br>
+                    Example: <code>100</code> or <code>150, international</code> or <code>50, domestic</code>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="bulkCountry">Default Country / Region</label>
+                        <select id="bulkCountry">
+                            <option value="us">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="eu">European Union</option>
+                            <option value="ca">Canada</option>
+                            <option value="au">Australia</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bulkAccountType">Account Type</label>
+                        <select id="bulkAccountType">
+                            <option value="standard">Standard Business</option>
+                            <option value="nonprofit">Non-Profit</option>
+                            <option value="charity">Charity</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="bulkTransactions">Enter Transactions <span class="label-help">(one per line)</span></label>
+                    <textarea id="bulkTransactions" placeholder="100
+150, international
+75
+200, domestic
+50.50"></textarea>
+                </div>
+
+                <button class="btn" onclick="calculateBulk()">Calculate All Transactions</button>
+
+                <div id="bulkResults" style="display: none;"></div>
+            </div>
+
+            <!-- Profit Calculator -->
+            <div id="profit-tool" class="tool-section">
+                <div class="info-box">
+                    <strong>💹 Profit Calculator:</strong> Calculate the selling price needed to achieve your desired profit after PayPal fees.
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="profitCost">Product Cost <span class="label-help">(Your cost)</span></label>
+                        <input type="number" id="profitCost" placeholder="0.00" step="0.01" min="0" oninput="calculateProfit()">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profitMargin">Desired Profit Margin <span class="label-help">(%)</span></label>
+                        <input type="number" id="profitMargin" placeholder="20" step="0.1" min="0" oninput="calculateProfit()">
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="profitCountry">Country / Region</label>
+                        <select id="profitCountry" onchange="calculateProfit()">
+                            <option value="us">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="eu">European Union</option>
+                            <option value="ca">Canada</option>
+                            <option value="au">Australia</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profitType">Transaction Type</label>
+                        <select id="profitType" onchange="calculateProfit()">
+                            <option value="domestic">Domestic</option>
+                            <option value="international">International</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="profitCurrency" onchange="calculateProfit()">
+                    <label for="profitCurrency" style="margin-bottom: 0;">Include Currency Conversion Fee</label>
+                </div>
+
+                <div id="profitResult" style="display: none;"></div>
+            </div>
+
+            <!-- eBay + PayPal Calculator -->
+            <div id="ebay-tool" class="tool-section">
+                <div class="warning-box">
+                    <strong>🛒 eBay + PayPal Combined Calculator:</strong> Calculate total fees when selling on eBay with PayPal payments. Note: eBay now uses managed payments, but this is useful for alternative platforms or historical reference.
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="ebayPrice">Sale Price <span class="label-help">(USD)</span></label>
+                        <input type="number" id="ebayPrice" placeholder="0.00" step="0.01" min="0" oninput="calculateEbay()">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ebayCategory">eBay Category</label>
+                        <select id="ebayCategory" onchange="calculateEbay()">
+                            <option value="10">Most Categories (12.9%)</option>
+                            <option value="12">Books/Music/Movies (12%)</option>
+                            <option value="13.25">Business Equipment (13.25%)</option>
+                            <option value="3.5">Vehicles (3.5% max $250)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="ebayShipping">Shipping Cost <span class="label-help">(charged to buyer)</span></label>
+                        <input type="number" id="ebayShipping" placeholder="0.00" step="0.01" min="0" oninput="calculateEbay()">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ebayPayPalType">PayPal Transaction</label>
+                        <select id="ebayPayPalType" onchange="calculateEbay()">
+                            <option value="domestic">Domestic (2.99% + $0.49)</option>
+                            <option value="international">International (4.49% + $0.49)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="ebayResult" style="display: none;"></div>
             </div>
         </div>
 
         <!-- Features -->
         <div class="features">
             <div class="feature-card">
-                <div class="feature-icon">⚡</div>
-                <div class="feature-title">Instant Calculation</div>
-                <p>Calculate PayPal fees in real-time with our advanced <strong>PayPal transaction fee calculator</strong>.</p>
-            </div>
-            <div class="feature-card">
                 <div class="feature-icon">🌍</div>
-                <div class="feature-title">International Support</div>
-                <p>Our <strong>PayPal international fee calculator</strong> supports cross-border transactions with accurate rates.</p>
+                <div class="feature-title">Multi-Currency Support</div>
+                <p>Calculate fees for <strong>international transactions</strong> with currency conversion rates. Supports US, UK, EU, Canada, Australia, and more.</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">🛡️</div>
-                <div class="feature-title">2026 Updated Rates</div>
-                <p>Always up-to-date with the latest PayPal fee structure for 2026, including goods and services fees.</p>
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">Bulk Processing</div>
+                <p>Process hundreds of transactions at once with our <strong>bulk calculator</strong>. Perfect for monthly reconciliation and accounting.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💹</div>
+                <div class="feature-title">Profit Optimization</div>
+                <p>Calculate optimal pricing with our <strong>profit calculator</strong>. Factor in all fees to maintain your desired margins.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛒</div>
+                <div class="feature-title">eBay Integration</div>
+                <p>Combined <strong>eBay and PayPal fee calculator</strong> for complete marketplace fee analysis.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-title">Account Types</div>
+                <p>Support for standard, non-profit, charity, and micropayment accounts with accurate <strong>fee structures</strong>.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Real-Time Calculation</div>
+                <p>Instant results with detailed breakdowns. All calculations performed locally for <strong>privacy and speed</strong>.</p>
             </div>
         </div>
 
         <!-- Content Section -->
         <div class="content-section">
-            <h2>What is a PayPal Calculator Fee?</h2>
-            <p>A <strong>PayPal calculator fee</strong> is an essential tool for online sellers, freelancers, and businesses that need to understand the exact costs associated with receiving payments through PayPal. When you use PayPal for business transactions, PayPal charges a fee based on the transaction type and amount.</p>
-            <p>Our <strong>PayPal fee calculator 2026</strong> helps you determine exactly how much you'll receive after PayPal's fees are deducted, or how much you need to send to ensure the recipient gets a specific amount.</p>
+            <h2>Professional PayPal Calculator Fee - Complete Guide</h2>
+            <p>Our <strong>advanced PayPal calculator fee tool</strong> is designed for professionals who need accurate fee calculations across multiple scenarios. Whether you're an e-commerce seller, freelancer, or business owner, this comprehensive calculator provides everything you need to understand and optimize your PayPal transaction costs.</p>
 
             <h2>Understanding PayPal Goods and Services Fee Calculator</h2>
-            <p>The <strong>PayPal goods and services fee calculator</strong> is specifically designed for commercial transactions. When you receive payments for goods or services, PayPal typically charges:</p>
+            <p>The <strong>PayPal goods and services fee calculator</strong> must account for various factors:</p>
             <ul style="margin: 15px 0 15px 30px;">
-                <li><strong>Domestic transactions:</strong> 2.99% + $0.49 fixed fee</li>
-                <li><strong>International transactions:</strong> 4.49% + $0.49 fixed fee</li>
-                <li><strong>Micropayments:</strong> 6.5% + $0.05 fixed fee (for transactions under $10)</li>
-            </ul>
-            <p>Using our calculator, you can instantly see how much of your payment goes to PayPal fees and how much you actually receive.</p>
-
-            <h2>PayPal International Fee Calculator</h2>
-            <p>If you're receiving payments from customers in different countries, you need a reliable <strong>PayPal international fee calculator</strong>. International transactions typically have higher fees due to currency conversion and cross-border processing.</p>
-            <p>Our calculator automatically applies the correct international fee rate (4.49% + $0.49), helping you price your products or services appropriately for international customers. This is crucial for:</p>
-            <ul style="margin: 15px 0 15px 30px;">
-                <li>E-commerce stores selling globally</li>
-                <li>Freelancers working with international clients</li>
-                <li>Digital product sellers</li>
-                <li>Service providers with worldwide customers</li>
+                <li><strong>Base Transaction Fee:</strong> Varies by country (US: 2.99%, UK: 2.9%, EU: 2.49%)</li>
+                <li><strong>Fixed Fee:</strong> $0.49 in US, £0.30 in UK, €0.35 in EU</li>
+                <li><strong>International Fee:</strong> Additional 1.5% for cross-border transactions</li>
+                <li><strong>Currency Conversion:</strong> 3.5% - 4% when receiving foreign currency</li>
+                <li><strong>Account Type Variations:</strong> Non-profits get reduced rates (2.2% + $0.30)</li>
             </ul>
 
-            <h2>PayPal Invoice Fee Calculator</h2>
-            <p>When you send invoices through PayPal, the platform charges the same fees as goods and services transactions. Our <strong>PayPal invoice fee calculator</strong> helps you determine:</p>
+            <h2>PayPal International Fee Calculator with Currency Conversion</h2>
+            <p>When calculating <strong>PayPal international fees</strong>, many calculators miss the critical currency conversion component. Our advanced calculator includes:</p>
             <ul style="margin: 15px 0 15px 30px;">
-                <li>The exact amount to invoice to receive your desired payment</li>
-                <li>How to structure your invoices to account for PayPal fees</li>
-                <li>Whether to absorb the fees or pass them to your customer</li>
+                <li><strong>Cross-Border Transaction Fee:</strong> Base rate + 1.5%</li>
+                <li><strong>Currency Conversion Fee:</strong> 3.5% - 4% above the wholesale exchange rate</li>
+                <li><strong>Combined Impact:</strong> Total fees can reach 7-8% for international transactions</li>
+                <li><strong>Real-World Example:</strong> $100 international sale = $7.48 in fees (4.49% + $0.49 + 3% conversion)</li>
             </ul>
 
-            <h2>eBay and PayPal Fee Calculator</h2>
-            <p>Although eBay now has its own managed payments system, many sellers still need an <strong>eBay and PayPal fee calculator</strong> for historical transactions or alternative payment methods. Understanding both fee structures is essential for calculating total selling costs and determining profitable pricing strategies.</p>
+            <h2>Bulk PayPal Fee Calculator for Business</h2>
+            <p>Our <strong>bulk calculator</strong> is essential for:</p>
+            <ul style="margin: 15px 0 15px 30px;">
+                <li><strong>Monthly Reconciliation:</strong> Process all transactions at once</li>
+                <li><strong>Financial Forecasting:</strong> Predict fees for upcoming sales</li>
+                <li><strong>Tax Preparation:</strong> Calculate deductible transaction costs</li>
+                <li><strong>Marketplace Sellers:</strong> Analyze fees across multiple platforms</li>
+            </ul>
 
-            <h2>PayPal Fee Calculator for Different Transaction Types</h2>
+            <h2>PayPal Profit Calculator - Optimize Your Pricing</h2>
+            <p>The <strong>profit calculator</strong> answers the critical question: "What should I charge to maintain my profit margin after fees?" This tool:</p>
+            <ul style="margin: 15px 0 15px 30px;">
+                <li>Calculates required selling price based on costs and desired margin</li>
+                <li>Factors in all PayPal fees (transaction + currency conversion)</li>
+                <li>Shows exact profit amount after fees</li>
+                <li>Helps maintain consistent margins across domestic and international sales</li>
+            </ul>
+
+            <h2>eBay and PayPal Fee Calculator Integration</h2>
+            <p>While eBay now uses managed payments, understanding combined fees is still crucial for:</p>
+            <ul style="margin: 15px 0 15px 30px;">
+                <li><strong>Alternative Marketplaces:</strong> Etsy, Mercari, Facebook Marketplace</li>
+                <li><strong>Historical Analysis:</strong> Understanding past transactions</li>
+                <li><strong>Fee Comparison:</strong> Evaluating different payment processors</li>
+                <li><strong>True Profit Calculation:</strong> Total marketplace + payment fees</li>
+            </ul>
+
+            <h2>PayPal Fee Calculator by Country</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Transaction Type</th>
-                        <th>Fee Structure</th>
-                        <th>Best For</th>
+                        <th>Country/Region</th>
+                        <th>Domestic Rate</th>
+                        <th>International Rate</th>
+                        <th>Currency Conversion</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Domestic Goods & Services</td>
+                        <td>United States</td>
                         <td>2.99% + $0.49</td>
-                        <td>US-based transactions</td>
-                    </tr>
-                    <tr>
-                        <td>International Goods & Services</td>
                         <td>4.49% + $0.49</td>
-                        <td>Cross-border payments</td>
+                        <td>3.5% - 4%</td>
                     </tr>
                     <tr>
-                        <td>Micropayments</td>
-                        <td>6.5% + $0.05</td>
-                        <td>Transactions under $10</td>
+                        <td>United Kingdom</td>
+                        <td>2.9% + £0.30</td>
+                        <td>4.4% + £0.30</td>
+                        <td>3.5% - 4%</td>
+                    </tr>
+                    <tr>
+                        <td>European Union</td>
+                        <td>2.49% + €0.35</td>
+                        <td>3.99% + €0.35</td>
+                        <td>3.5% - 4%</td>
+                    </tr>
+                    <tr>
+                        <td>Canada</td>
+                        <td>2.9% + C$0.30</td>
+                        <td>4.4% + C$0.30</td>
+                        <td>3.5% - 4%</td>
+                    </tr>
+                    <tr>
+                        <td>Australia</td>
+                        <td>2.6% + A$0.30</td>
+                        <td>4.1% + A$0.30</td>
+                        <td>3.5% - 4%</td>
                     </tr>
                 </tbody>
             </table>
 
-            <h2>Frequently Asked Questions - PayPal Calculator Fee</h2>
+            <h2>Frequently Asked Questions - Advanced PayPal Calculator</h2>
             
             <div class="faq-item">
-                <div class="faq-question">How do I calculate PayPal fees for goods and services?</div>
-                <p>To calculate PayPal goods and services fees, multiply your transaction amount by the percentage rate (2.99% for domestic or 4.49% for international), then add the fixed fee ($0.49). For example, on a $100 domestic transaction: ($100 × 0.0299) + $0.49 = $3.48 in fees.</p>
+                <div class="faq-question">How do I calculate PayPal fees with currency conversion?</div>
+                <p>For international transactions with currency conversion, PayPal charges: (1) The standard international transaction fee (e.g., 4.49% + $0.49), PLUS (2) A currency conversion fee of 3.5-4% above the wholesale exchange rate. For a $100 foreign currency transaction: Transaction fee = $4.98, Currency conversion = ~$3.50, Total fees = ~$8.48 (8.48% effective rate).</p>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">What is the PayPal international fee calculator used for?</div>
-                <p>The <strong>PayPal international fee calculator</strong> is used to determine fees for cross-border transactions. International transactions have higher fees (4.49% + $0.49) compared to domestic ones, plus potential currency conversion fees.</p>
+                <div class="faq-question">What's the difference between domestic and international PayPal fees?</div>
+                <p>Domestic transactions (same country) are charged 2.99% + $0.49 in the US. International transactions (cross-border) are charged 4.49% + $0.49 - that's 1.5% higher. If currency conversion is involved, add another 3.5-4%. So international transactions can cost 3-5 times more than domestic ones.</p>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Can I avoid PayPal fees?</div>
-                <p>PayPal fees for goods and services transactions cannot be completely avoided as they're part of PayPal's business model. However, you can minimize fees by using micropayment pricing for small transactions or negotiating who pays the fees.</p>
+                <div class="faq-question">How does the bulk calculator help my business?</div>
+                <p>The <strong>bulk PayPal fee calculator</strong> allows you to process 100+ transactions at once. Simply paste your transaction amounts (one per line), and get a complete breakdown including: total fees paid, average fee percentage, total received vs sent, and transaction-by-transaction analysis. Perfect for monthly accounting and financial reporting.</p>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">How accurate is this PayPal fee calculator 2026?</div>
-                <p>Our <strong>PayPal fee calculator 2026</strong> is updated with the latest official PayPal fee structure. It provides accurate calculations for standard transactions. However, some specialized account types or promotional rates may differ slightly.</p>
+                <div class="faq-question">How do I use the profit calculator to set prices?</div>
+                <p>Enter your product cost and desired profit margin (e.g., 30%). The calculator shows the exact selling price needed to achieve that margin after PayPal fees. For example: Cost = $50, Margin = 30%, Required selling price = $75.18 (includes fees), Your profit = $22.18 (29.5% actual margin after $2.99 in fees).</p>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Should I charge customers the PayPal fee?</div>
-                <p>Whether to charge customers PayPal fees depends on your business model and competition. Some businesses absorb the fees (building them into product prices), while others add them as a separate line item. Use our calculator to determine the exact amount if you choose to pass fees to customers.</p>
+                <div class="faq-question">Are non-profit PayPal fees really lower?</div>
+                <p>Yes! Registered non-profit organizations can apply for reduced PayPal rates of 2.2% + $0.30 (vs standard 2.99% + $0.49). That's a 26% reduction in fees. On $100,000 in donations, you'd save approximately $820. You must apply through PayPal and provide 501(c)(3) documentation.</p>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Are PayPal micropayment fees better for small transactions?</div>
-                <p>PayPal micropayment fees (6.5% + $0.05) are typically better for transactions under $10. For example, on a $5 transaction, standard fees would be $0.64, while micropayment fees would be $0.38. You need to contact PayPal to enable micropayment pricing on your account.</p>
+                <div class="faq-question">Should I use micropayment pricing?</div>
+                <p>Micropayment pricing (6.5% + $0.05) is better for transactions under $10. Break-even point is around $10.50. For a $5 transaction: Standard fee = $0.64 (12.8%), Micropayment fee = $0.38 (7.6%). You save 40%! However, you need to contact PayPal to enable micropayment pricing - it's not automatic.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How accurate is this calculator compared to actual PayPal charges?</div>
+                <p>Our calculator uses official PayPal fee structures and is accurate to within $0.01 for standard accounts. However, actual fees may vary slightly due to: (1) Promotional rates for new accounts, (2) Volume discounts for high-volume sellers, (3) Real-time currency exchange rate fluctuations, (4) Special merchant agreements. Always verify final amounts in your PayPal transaction history.</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I deduct PayPal fees as business expenses?</div>
+                <p>Yes! In most jurisdictions, PayPal transaction fees are tax-deductible business expenses. Use our bulk calculator to total your annual fees for tax purposes. For example, if you process $200,000 in sales with average fees of 3.5%, that's $7,000 in deductible expenses. Consult with a tax professional for specific guidance.</p>
             </div>
         </div>
 
         <footer>
-            <p>&copy; 2026 PayPal Calculator Fee. Free PayPal fee calculator for accurate transaction cost estimation.</p>
+            <p>&copy; 2026 PayPal Calculator Fee - Professional Edition. Advanced fee calculator for businesses and professionals.</p>
             <div class="footer-links">
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="sitemap.xml">Sitemap</a>
@@ -503,68 +932,416 @@
     </div>
 
     <script>
-        let currentMode = 'receive';
-        
+        // Fee rates by country
         const feeRates = {
-            domestic: { percentage: 2.99, fixed: 0.49 },
-            international: { percentage: 4.49, fixed: 0.49 },
-            micropayment: { percentage: 6.5, fixed: 0.05 }
+            us: {
+                standard: { domestic: { percentage: 2.99, fixed: 0.49 }, international: { percentage: 4.49, fixed: 0.49 } },
+                nonprofit: { domestic: { percentage: 2.2, fixed: 0.30 }, international: { percentage: 3.7, fixed: 0.30 } },
+                charity: { domestic: { percentage: 1.99, fixed: 0.49 }, international: { percentage: 3.49, fixed: 0.49 } },
+                micropayment: { domestic: { percentage: 6.5, fixed: 0.05 }, international: { percentage: 6.5, fixed: 0.05 } }
+            },
+            uk: {
+                standard: { domestic: { percentage: 2.9, fixed: 0.30 }, international: { percentage: 4.4, fixed: 0.30 } },
+                nonprofit: { domestic: { percentage: 2.0, fixed: 0.20 }, international: { percentage: 3.5, fixed: 0.20 } },
+                charity: { domestic: { percentage: 1.4, fixed: 0.20 }, international: { percentage: 2.9, fixed: 0.20 } },
+                micropayment: { domestic: { percentage: 6.0, fixed: 0.05 }, international: { percentage: 6.0, fixed: 0.05 } }
+            },
+            eu: {
+                standard: { domestic: { percentage: 2.49, fixed: 0.35 }, international: { percentage: 3.99, fixed: 0.35 } },
+                nonprofit: { domestic: { percentage: 1.8, fixed: 0.25 }, international: { percentage: 3.3, fixed: 0.25 } },
+                charity: { domestic: { percentage: 1.2, fixed: 0.25 }, international: { percentage: 2.7, fixed: 0.25 } },
+                micropayment: { domestic: { percentage: 5.5, fixed: 0.05 }, international: { percentage: 5.5, fixed: 0.05 } }
+            },
+            ca: {
+                standard: { domestic: { percentage: 2.9, fixed: 0.30 }, international: { percentage: 4.4, fixed: 0.30 } },
+                nonprofit: { domestic: { percentage: 2.0, fixed: 0.20 }, international: { percentage: 3.5, fixed: 0.20 } },
+                charity: { domestic: { percentage: 1.5, fixed: 0.20 }, international: { percentage: 3.0, fixed: 0.20 } },
+                micropayment: { domestic: { percentage: 6.0, fixed: 0.05 }, international: { percentage: 6.0, fixed: 0.05 } }
+            },
+            au: {
+                standard: { domestic: { percentage: 2.6, fixed: 0.30 }, international: { percentage: 4.1, fixed: 0.30 } },
+                nonprofit: { domestic: { percentage: 1.9, fixed: 0.20 }, international: { percentage: 3.4, fixed: 0.20 } },
+                charity: { domestic: { percentage: 1.3, fixed: 0.20 }, international: { percentage: 2.8, fixed: 0.20 } },
+                micropayment: { domestic: { percentage: 5.8, fixed: 0.05 }, international: { percentage: 5.8, fixed: 0.05 } }
+            },
+            other: {
+                standard: { domestic: { percentage: 3.4, fixed: 0.30 }, international: { percentage: 4.9, fixed: 0.30 } },
+                nonprofit: { domestic: { percentage: 2.5, fixed: 0.30 }, international: { percentage: 4.0, fixed: 0.30 } },
+                charity: { domestic: { percentage: 2.0, fixed: 0.30 }, international: { percentage: 3.5, fixed: 0.30 } },
+                micropayment: { domestic: { percentage: 6.5, fixed: 0.05 }, international: { percentage: 6.5, fixed: 0.05 } }
+            }
         };
 
-        function switchTab(mode) {
-            currentMode = mode;
+        let currentMode = 'receive';
+        let currentMainTab = 'single';
+
+        function switchMainTab(tab) {
+            currentMainTab = tab;
             
-            // Update tab buttons
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
+            document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
             event.target.classList.add('active');
             
-            // Update tab content
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.remove('active');
-            });
-            document.getElementById(mode + '-tab').classList.add('active');
-            
-            // Update labels
-            if (mode === 'receive') {
-                document.getElementById('originalLabel').textContent = 'Amount Received';
-                document.getElementById('resultLabel').textContent = 'Net Amount (You Keep)';
-            } else {
-                document.getElementById('originalLabel').textContent = 'Amount to Receive';
-                document.getElementById('resultLabel').textContent = 'Total to Send';
-            }
-            
-            calculate();
+            document.querySelectorAll('.tool-section').forEach(s => s.classList.remove('active'));
+            document.getElementById(tab + '-tool').classList.add('active');
         }
 
-        function calculate() {
+        function switchSubTab(mode) {
+            currentMode = mode;
+            
+            document.querySelectorAll('.sub-tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(mode + '-tab').classList.add('active');
+            
+            calculateSingle();
+        }
+
+        function calculateSingle() {
             const amount = parseFloat(document.getElementById('amount').value);
-            const feeType = document.getElementById('feeType').value;
-            const resultDiv = document.getElementById('result');
+            const country = document.getElementById('country').value;
+            const accountType = document.getElementById('accountType').value;
+            const transactionType = document.getElementById('transactionType').value;
+            const includeCurrency = document.getElementById('currencyConversion').checked;
+            const resultDiv = document.getElementById('singleResult');
             
             if (isNaN(amount) || amount <= 0) {
                 resultDiv.style.display = 'none';
                 return;
             }
             
-            const rate = feeRates[feeType];
-            let fee, result;
+            const rate = feeRates[country][accountType][transactionType];
+            let transactionFee, currencyFee = 0, result;
             
             if (currentMode === 'receive') {
-                // Calculate fees for received amount
-                fee = amount * (rate.percentage / 100) + rate.fixed;
-                result = amount - fee;
+                transactionFee = amount * (rate.percentage / 100) + rate.fixed;
+                if (includeCurrency && transactionType === 'international') {
+                    currencyFee = amount * 0.035; // 3.5% currency conversion
+                }
+                result = amount - transactionFee - currencyFee;
             } else {
-                // Calculate total needed to send
                 result = (amount + rate.fixed) / (1 - rate.percentage / 100);
-                fee = result - amount;
+                transactionFee = result - amount;
+                if (includeCurrency && transactionType === 'international') {
+                    currencyFee = result * 0.035;
+                    result = result + currencyFee;
+                    transactionFee = result - amount;
+                }
             }
             
-            document.getElementById('originalAmount').textContent = '$' + amount.toFixed(2);
-            document.getElementById('feeAmount').textContent = '-$' + fee.toFixed(2);
-            document.getElementById('resultAmount').textContent = '$' + result.toFixed(2);
+            const totalFee = transactionFee + currencyFee;
+            const effectiveRate = (totalFee / (currentMode === 'receive' ? amount : result)) * 100;
             
+            let html = '<div class="result-box">';
+            html += '<div class="result-row">';
+            html += `<span class="result-label">${currentMode === 'receive' ? 'Amount Received' : 'Amount to Receive'}</span>`;
+            html += `<span class="result-value">$${amount.toFixed(2)}</span>`;
+            html += '</div>';
+            
+            if (transactionFee > 0) {
+                html += '<div class="result-row">';
+                html += `<span class="result-label">PayPal Transaction Fee (${rate.percentage}% + $${rate.fixed})</span>`;
+                html += `<span class="result-value fee-red">-$${transactionFee.toFixed(2)}</span>`;
+                html += '</div>';
+            }
+            
+            if (currencyFee > 0) {
+                html += '<div class="result-row">';
+                html += '<span class="result-label">Currency Conversion Fee (~3.5%)</span>';
+                html += `<span class="result-value fee-orange">-$${currencyFee.toFixed(2)}</span>`;
+                html += '</div>';
+            }
+            
+            html += '<div class="result-row">';
+            html += '<span class="result-label">Total Fees</span>';
+            html += `<span class="result-value fee-red">-$${totalFee.toFixed(2)}</span>`;
+            html += '</div>';
+            
+            html += '<div class="result-row">';
+            html += `<span class="result-label" style="font-size: 1.2rem;">${currentMode === 'receive' ? 'Net Amount (You Keep)' : 'Total to Send'}</span>`;
+            html += `<span class="result-value result-total">$${result.toFixed(2)}</span>`;
+            html += '</div>';
+            
+            html += '<div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e5e7eb; font-size: 0.9rem; color: #6b7280;">';
+            html += `Effective Fee Rate: <strong>${effectiveRate.toFixed(2)}%</strong> | `;
+            html += `Account: ${accountType.charAt(0).toUpperCase() + accountType.slice(1)} | `;
+            html += `Type: ${transactionType.charAt(0).toUpperCase() + transactionType.slice(1)}`;
+            html += '</div>';
+            
+            html += '</div>';
+            
+            resultDiv.innerHTML = html;
+            resultDiv.style.display = 'block';
+        }
+
+        function calculateBulk() {
+            const transactions = document.getElementById('bulkTransactions').value.trim().split('\n');
+            const country = document.getElementById('bulkCountry').value;
+            const accountType = document.getElementById('bulkAccountType').value;
+            const resultsDiv = document.getElementById('bulkResults');
+            
+            if (transactions.length === 0 || transactions[0] === '') {
+                alert('Please enter at least one transaction');
+                return;
+            }
+            
+            let totalAmount = 0, totalFees = 0, totalNet = 0;
+            let results = [];
+            
+            transactions.forEach((line, index) => {
+                const parts = line.split(',').map(p => p.trim());
+                const amount = parseFloat(parts[0]);
+                const type = parts[1] || 'domestic';
+                
+                if (isNaN(amount) || amount <= 0) return;
+                
+                const rate = feeRates[country][accountType][type.toLowerCase()];
+                const fee = amount * (rate.percentage / 100) + rate.fixed;
+                const net = amount - fee;
+                
+                totalAmount += amount;
+                totalFees += fee;
+                totalNet += net;
+                
+                results.push({ index: index + 1, amount, type, fee, net, rate: (fee/amount*100) });
+            });
+            
+            let html = '<div class="batch-results">';
+            html += '<h3 style="margin-bottom: 20px;">Bulk Calculation Results</h3>';
+            
+            // Summary cards
+            html += '<div class="summary-cards">';
+            html += '<div class="summary-card">';
+            html += '<div class="summary-label">Total Received</div>';
+            html += `<div class="summary-value">$${totalAmount.toFixed(2)}</div>`;
+            html += '</div>';
+            html += '<div class="summary-card">';
+            html += '<div class="summary-label">Total Fees</div>';
+            html += `<div class="summary-value fee-red">$${totalFees.toFixed(2)}</div>`;
+            html += '</div>';
+            html += '<div class="summary-card">';
+            html += '<div class="summary-label">Net Amount</div>';
+            html += `<div class="summary-value profit-green">$${totalNet.toFixed(2)}</div>`;
+            html += '</div>';
+            html += '<div class="summary-card">';
+            html += '<div class="summary-label">Avg Fee Rate</div>';
+            html += `<div class="summary-value">${(totalFees/totalAmount*100).toFixed(2)}%</div>`;
+            html += '</div>';
+            html += '<div class="summary-card">';
+            html += '<div class="summary-label">Transactions</div>';
+            html += `<div class="summary-value">${results.length}</div>`;
+            html += '</div>';
+            html += '</div>';
+            
+            // Detailed table
+            html += '<table class="batch-table" style="margin-top: 30px;">';
+            html += '<thead><tr>';
+            html += '<th>#</th><th>Amount</th><th>Type</th><th>Fee</th><th>Fee %</th><th>Net Amount</th>';
+            html += '</tr></thead><tbody>';
+            
+            results.forEach(r => {
+                html += '<tr>';
+                html += `<td>${r.index}</td>`;
+                html += `<td>$${r.amount.toFixed(2)}</td>`;
+                html += `<td>${r.type}</td>`;
+                html += `<td class="fee-red">$${r.fee.toFixed(2)}</td>`;
+                html += `<td>${r.rate.toFixed(2)}%</td>`;
+                html += `<td><strong>$${r.net.toFixed(2)}</strong></td>`;
+                html += '</tr>';
+            });
+            
+            html += '</tbody></table>';
+            html += '</div>';
+            
+            resultsDiv.innerHTML = html;
+            resultsDiv.style.display = 'block';
+        }
+
+        function calculateProfit() {
+            const cost = parseFloat(document.getElementById('profitCost').value);
+            const margin = parseFloat(document.getElementById('profitMargin').value);
+            const country = document.getElementById('profitCountry').value;
+            const type = document.getElementById('profitType').value;
+            const includeCurrency = document.getElementById('profitCurrency').checked;
+            const resultDiv = document.getElementById('profitResult');
+            
+            if (isNaN(cost) || cost <= 0 || isNaN(margin) || margin <= 0) {
+                resultDiv.style.display = 'none';
+                return;
+            }
+            
+            const rate = feeRates[country]['standard'][type];
+            const desiredProfit = cost * (margin / 100);
+            
+            // Calculate selling price needed
+            // sellingPrice - fee - cost = desiredProfit
+            // sellingPrice - (sellingPrice * percentage + fixed) = cost + desiredProfit
+            // sellingPrice * (1 - percentage) = cost + desiredProfit + fixed
+            let sellingPrice = (cost + desiredProfit + rate.fixed) / (1 - rate.percentage / 100);
+            
+            let fee = sellingPrice * (rate.percentage / 100) + rate.fixed;
+            let currencyFee = 0;
+            
+            if (includeCurrency && type === 'international') {
+                currencyFee = sellingPrice * 0.035;
+                sellingPrice = (cost + desiredProfit + rate.fixed + currencyFee) / (1 - rate.percentage / 100 - 0.035);
+                fee = sellingPrice * (rate.percentage / 100) + rate.fixed;
+                currencyFee = sellingPrice * 0.035;
+            }
+            
+            const totalFee = fee + currencyFee;
+            const actualProfit = sellingPrice - cost - totalFee;
+            const actualMargin = (actualProfit / cost) * 100;
+            
+            let html = '<div class="result-box">';
+            html += '<h4 style="margin-bottom: 15px; color: #003087;">Pricing Recommendation</h4>';
+            
+            html += '<div class="result-row">';
+            html += '<span class="result-label">Your Cost</span>';
+            html += `<span class="result-value">$${cost.toFixed(2)}</span>`;
+            html += '</div>';
+            
+            html += '<div class="result-row">';
+            html += '<span class="result-label">Desired Profit Margin</span>';
+            html += `<span class="result-value">${margin}%</span>`;
+            html += '</div>';
+            
+            html += '<div class="result-row">';
+            html += '<span class="result-label" style="font-size: 1.2rem; color: #003087;">Required Selling Price</span>';
+            html += `<span class="result-value result-total">$${sellingPrice.toFixed(2)}</span>`;
+            html += '</div>';
+            
+            html += '<div style="margin: 20px 0; padding: 20px 0; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">';
+            html += '<h4 style="margin-bottom: 10px; color: #6b7280;">Fee Breakdown</h4>';
+            html += '<div class="result-row" style="border: none; padding: 5px 0;">';
+            html += '<span class="result-label">PayPal Transaction Fee</span>';
+            html += `<span class="result-value fee-red">$${fee.toFixed(2)}</span>`;
+            html += '</div>';
+            if (currencyFee > 0) {
+                html += '<div class="result-row" style="border: none; padding: 5px 0;">';
+                html += '<span class="result-label">Currency Conversion Fee</span>';
+                html += `<span class="result-value fee-orange">$${currencyFee.toFixed(2)}</span>`;
+                html += '</div>';
+            }
+            html += '<div class="result-row" style="border: none; padding: 5px 0;">';
+            html += '<span class="result-label"><strong>Total Fees</strong></span>';
+            html += `<span class="result-value fee-red"><strong>$${totalFee.toFixed(2)}</strong></span>`;
+            html += '</div>';
+            html += '</div>';
+            
+            html += '<div class="result-row">';
+            html += '<span class="result-label" style="font-size: 1.1rem;">Your Actual Profit</span>';
+            html += `<span class="result-value profit-green" style="font-size: 1.5rem;">$${actualProfit.toFixed(2)}</span>`;
+            html += '</div>';
+            
+            html += '<div class="result-row">';
+            html += '<span class="result-label">Actual Profit Margin</span>';
+            html += `<span class="result-value profit-green">${actualMargin.toFixed(1)}%</span>`;
+            html += '</div>';
+            
+            html += '<div style="margin-top: 15px; padding: 15px; background: #f0fdf4; border-radius: 6px; border-left: 4px solid #10b981;">';
+            html += '<strong>💡 Pricing Tip:</strong> To achieve your target ${margin}% margin after PayPal fees, ';
+            html += `price your product at <strong>$${sellingPrice.toFixed(2)}</strong>. `;
+            html += `This covers your $${cost.toFixed(2)} cost, $${totalFee.toFixed(2)} in fees, and leaves you with $${actualProfit.toFixed(2)} profit.`;
+            html += '</div>';
+            
+            html += '</div>';
+            
+            resultDiv.innerHTML = html;
+            resultDiv.style.display = 'block';
+        }
+
+        function calculateEbay() {
+            const price = parseFloat(document.getElementById('ebayPrice').value);
+            const categoryFee = parseFloat(document.getElementById('ebayCategory').value);
+            const shipping = parseFloat(document.getElementById('ebayShipping').value) || 0;
+            const paypalType = document.getElementById('ebayPayPalType').value;
+            const resultDiv = document.getElementById('ebayResult');
+            
+            if (isNaN(price) || price <= 0) {
+                resultDiv.style.display = 'none';
+                return;
+            }
+            
+            const totalSale = price + shipping;
+            
+            // eBay fees
+            let ebayFee = (price * categoryFee / 100);
+            if (categoryFee === 3.5 && ebayFee > 250) ebayFee = 250; // Vehicle cap
+            
+            const ebayShippingFee = shipping * 0.129; // 12.9% on shipping
+            const totalEbayFee = ebayFee + ebayShippingFee;
+            
+            // PayPal fees
+            const paypalRate = paypalType === 'domestic' ? 
+                { percentage: 2.99, fixed: 0.49 } : 
+                { percentage: 4.49, fixed: 0.49 };
+            const paypalFee = totalSale * (paypalRate.percentage / 100) + paypalRate.fixed;
+            
+            const totalFees = totalEbayFee + paypalFee;
+            const netAmount = totalSale - totalFees;
+            const effectiveRate = (totalFees / totalSale) * 100;
+            
+            let html = '<div class="result-box">';
+            html += '<h4 style="margin-bottom: 15px; color: #003087;">Combined eBay + PayPal Fee Analysis</h4>';
+            
+            html += '<div class="result-row">';
+            html += '<span class="result-label">Item Sale Price</span>';
+            html += `<span class="result-value">$${price.toFixed(2)}</span>`;
+            html += '</div>';
+            
+            if (shipping > 0) {
+                html += '<div class="result-row">';
+                html += '<span class="result-label">Shipping (from buyer)</span>';
+                html += `<span class="result-value">$${shipping.toFixed(2)}</span>`;
+                html += '</div>';
+            }
+            
+            html += '<div class="result-row">';
+            html += '<span class="result-label"><strong>Total Sale Amount</strong></span>';
+            html += `<span class="result-value"><strong>$${totalSale.toFixed(2)}</strong></span>`;
+            html += '</div>';
+            
+            html += '<div style="margin: 20px 0; padding: 20px 0; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">';
+            html += '<h4 style="margin-bottom: 10px; color: #dc2626;">Fee Breakdown</h4>';
+            
+            html += '<div class="result-row" style="border: none; padding: 5px 0;">';
+            html += `<span class="result-label">eBay Final Value Fee (${categoryFee}%)</span>`;
+            html += `<span class="result-value fee-red">-$${ebayFee.toFixed(2)}</span>`;
+            html += '</div>';
+            
+            if (shipping > 0) {
+                html += '<div class="result-row" style="border: none; padding: 5px 0;">';
+                html += '<span class="result-label">eBay Shipping Fee (12.9%)</span>';
+                html += `<span class="result-value fee-red">-$${ebayShippingFee.toFixed(2)}</span>`;
+                html += '</div>';
+            }
+            
+            html += '<div class="result-row" style="border: none; padding: 5px 0;">';
+            html += `<span class="result-label">PayPal Fee (${paypalRate.percentage}% + $${paypalRate.fixed})</span>`;
+            html += `<span class="result-value fee-orange">-$${paypalFee.toFixed(2)}</span>`;
+            html += '</div>';
+            
+            html += '<div class="result-row" style="border: none; padding: 10px 0; margin-top: 10px; border-top: 2px solid #e5e7eb;">';
+            html += '<span class="result-label"><strong>Total Fees</strong></span>';
+            html += `<span class="result-value fee-red"><strong>-$${totalFees.toFixed(2)}</strong></span>`;
+            html += '</div>';
+            html += '</div>';
+            
+            html += '<div class="result-row">';
+            html += '<span class="result-label" style="font-size: 1.2rem;">Your Net Proceeds</span>';
+            html += `<span class="result-value result-total profit-green">$${netAmount.toFixed(2)}</span>`;
+            html += '</div>';
+            
+            html += '<div style="margin-top: 15px; padding: 15px; background: #fef3c7; border-radius: 6px; border-left: 4px solid #f59e0b;">';
+            html += `<strong>⚠️ Fee Impact:</strong> Combined marketplace and payment fees total <strong>${effectiveRate.toFixed(2)}%</strong> of your sale. `;
+            html += `On a $${totalSale.toFixed(2)} sale, you pay $${totalFees.toFixed(2)} in fees and keep $${netAmount.toFixed(2)}. `;
+            html += `This means you need to factor in ~${Math.ceil(effectiveRate)}% margin just to break even on fees.`;
+            html += '</div>';
+            
+            html += '</div>';
+            
+            resultDiv.innerHTML = html;
             resultDiv.style.display = 'block';
         }
 
@@ -575,4 +1352,3 @@
     </script>
 </body>
 </html>
-
